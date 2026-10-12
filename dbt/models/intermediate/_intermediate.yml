@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: int_gdelt__events_clean
+    description: GDELT events published within 7 days of the event date, with event region.
+  - name: int_gdelt__stories
+    description: One row per news article (story), grouping all GDELT events from the same URL; rule-based category, severity score and oil-relevance flag. Incremental (last 3 days reprocessed).
+    columns:
+      - name: story_id
+        tests: [unique, not_null]
+      - name: category_rule
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['vessel_attack_or_seizure', 'infrastructure_strike', 'chokepoint', 'sanctions', 'opec_plus', 'talks_or_ceasefire', 'diplomacy_general', 'other']

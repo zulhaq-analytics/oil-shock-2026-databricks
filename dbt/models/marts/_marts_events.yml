@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: fct_risk_index_daily
+    description: Daily geopolitical risk index by event region and global (stories, summed severity, 90-day z-score) with a GDELT data-gap flag. Source The GDELT Project.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
