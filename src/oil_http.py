@@ -44,6 +44,16 @@ LOG_SCHEMA = T.StructType([
     T.StructField("called_at", T.TimestampType()),
 ])
 
+FILE_LOG_SCHEMA = T.StructType([
+    T.StructField("source", T.StringType()),
+    T.StructField("file_name", T.StringType()),
+    T.StructField("file_path", T.StringType()),
+    T.StructField("bytes", T.LongType()),
+    T.StructField("rows_loaded", T.LongType()),
+    T.StructField("status", T.StringType()),
+    T.StructField("logged_at", T.TimestampType()),
+])
+
 
 class Downloader:
     """HTTP GET with retries and buffered call logging (call flush() at the end)."""
@@ -141,9 +151,30 @@ def file_already_loaded(source, file_name):
     return n > 0
 
 
+def loaded_files(source):
+    """All file names already loaded for a source, in one query."""
+    rows = spark().sql(
+        f"SELECT DISTINCT file_name FROM {CATALOG}.ops.file_log WHERE source = :s AND status = 'loaded'",
+        args={"s": source}).collect()
+    return {r["file_name"] for r in rows}
+
+
 def log_file(source, file_name, file_path, size, rows_loaded, status):
     spark().sql(f"""
         INSERT INTO {CATALOG}.ops.file_log
         VALUES (:s, :f, :p, CAST(:b AS BIGINT), CAST(:r AS BIGINT), :st, current_timestamp())
     """, args={"s": source, "f": file_name, "p": file_path,
                "b": int(size or 0), "r": int(rows_loaded or 0), "st": status})
+
+
+def log_files_bulk(source, entries):
+    """entries: list of (file_name, file_path, size, rows_loaded, status). One insert for all."""
+    if not entries:
+        return 0
+    now = dt.datetime.utcnow()
+    rows = [{"source": source, "file_name": n, "file_path": p, "bytes": int(b or 0),
+             "rows_loaded": int(r or 0), "status": st, "logged_at": now}
+            for n, p, b, r, st in entries]
+    (spark().createDataFrame(rows, FILE_LOG_SCHEMA)
+        .write.mode("append").saveAsTable(f"{CATALOG}.ops.file_log"))
+    return len(rows)
