@@ -1,0 +1,62 @@
+event_date,event,category,region,severity_1to5,confidence,source_url
+2025-01-10,"US imposes sweeping sanctions on Russian oil: Gazprom Neft, Surgutneftegas and about 180 tankers",sanctions,Russia/Black Sea,3,verified,https://ogj.com/home/article/55260254/us-imposes-toughest-sanctions-yet-on-russias-oil-industry
+2025-02-04,"US reinstates 'maximum pressure' on Iran (NSPM-2), aiming to drive Iranian oil exports to zero",sanctions,Gulf,3,verified,https://www.iranwatch.org/library/governments/united-states/executive-branch/department-state/sanctioning-china-based-teapot-refinery-pressure-iran-further
+2025-03-20,US sanctions first Chinese 'teapot' refinery (Shandong Luqing) for buying Iranian crude,sanctions,Gulf,2,verified,https://maritime-executive.com/article/trump-sanctions-first-chinese-refinery-and-tankers-in-iranian-oil-trade
+2025-04-02,US 'Liberation Day' tariffs shock global markets,policy,Americas,3,verified,https://fueloilnews.co.uk/2026/01/what-price-oil-2025-in-review/
+2025-04-03,OPEC+ eight surprise with a 411 kb/d hike for May (three times the planned pace); Brent falls over 6%,opec_plus,Global,3,verified,https://www.itiger.com/news/2524257384
+2025-04-16,US sanctions second Chinese teapot refinery (Shandong Shengxing) and Iranian shadow-fleet tankers,sanctions,Gulf,2,verified,https://www.globalsecurity.org/wmd/library/news/iran/2025/iran-250416-state01.htm
+2025-05-08,US sanctions third Chinese teapot refinery (Hebei Xinhai) and Shandong terminal operators,sanctions,Gulf,2,verified,https://www.iranwatch.org/node/13489
+2025-06-13,Israel strikes Iranian military and nuclear sites; 12-day Israel-Iran war begins,military_escalation,Gulf,4,verified,https://jpost.com/opinion/article-880994
+2025-06-22,US strikes Iranian nuclear facilities (Operation Midnight Hammer),military_escalation,Gulf,4,verified,https://jpost.com/opinion/article-880994
+2025-06-24,US-brokered Israel-Iran ceasefire; Brent back to pre-war level,talks_or_ceasefire,Gulf,3,verified,https://jpost.com/opinion/article-880994
+2025-07-18,EU 18th sanctions package: Russian crude price cap cut from $60 to $47.60 (from Sep 3) and ban on products refined from Russian crude,sanctions,Russia/Black Sea,3,verified,https://www.whitecase.com/insight-alert/eu-adopts-18th-sanctions-package-against-russia
+2025-10-10,Israel-Hamas ceasefire implementation; oil prices fall,talks_or_ceasefire,Levant,2,check date,https://fueloilnews.co.uk/2026/01/what-price-oil-2025-in-review/
+2025-10-22,US sanctions Rosneft and Lukoil (about 5% of global crude output),sanctions,Russia/Black Sea,3,verified,https://www.steptoe.com/en/news-publications/international-compliance-blog/us-targets-rosneft-and-lukoil-in-first-russia-sanctions-action-under-trump.html
+2026-01-03,US military operation in Venezuela; President Maduro captured,military_escalation,Americas,3,verified,https://fueloilnews.co.uk/2026/04/what-price-oil-q1-2026-in-review/
+2026-01-07,US seizes a Russian-flagged tanker in the North Atlantic,vessel_attack_or_seizure,Other,2,verified,https://fueloilnews.co.uk/2026/04/what-price-oil-q1-2026-in-review/
+2026-01-09,Trump meets oil executives on reviving Venezuela's oil industry,policy,Americas,2,verified,https://fueloilnews.co.uk/2026/04/what-price-oil-q1-2026-in-review/
+2026-01-12,Iran protests escalate; Trump signals possible strikes; oil at 12-week highs,military_escalation,Gulf,3,verified,https://pukmedia.com/EN/Details/80164
+2026-01-15,Trump says Iran crackdown easing; 'Iran premium' unwinds,talks_or_ceasefire,Gulf,2,verified,https://profit.pakistantoday.com.pk/?p=224114
+2026-01-21,EU ban on fuels refined from Russian crude in third countries takes effect,sanctions,Russia/Black Sea,2,verified,https://www.whitecase.com/insight-alert/eu-adopts-18th-sanctions-package-against-russia
+2026-01-22,US deploys USS Abraham Lincoln carrier group to the Middle East,military_escalation,Gulf,2,verified,https://fueloilnews.co.uk/2026/04/what-price-oil-q1-2026-in-review/
+2026-01-29,Brent above $70 on rising US-Iran conflict fears,military_escalation,Gulf,2,verified,https://www.energyintel.com/0000017b-a7c4-de4c-a17b-e7c6c1670000
+2026-02-01,EU and UK lower the Russian crude price cap to $44.10,sanctions,Russia/Black Sea,2,verified,https://www.shipownersclub.com/latest-updates/news/ig-circular-european-union-eu-adopts-18th-sanctions-package-against-russia/
+2026-02-26,US and Iran hold talks in Geneva,talks_or_ceasefire,Gulf,2,verified,https://fueloilnews.co.uk/2026/04/what-price-oil-q1-2026-in-review/
+2026-02-28,US and Israel strike Iran; Iran closes the Strait of Hormuz to allied shipping,chokepoint,Gulf,5,verified,https://en.wikipedia.org/wiki/2026_United_States_naval_blockade_of_Iran
+2026-03-01,OPEC+ agrees a 206 kb/d output increase for April,opec_plus,Global,2,verified,https://www.tradearabia.com/tag/Opec-Plus
+2026-03-02,Iranian drone strikes on Ras Laffan; QatarEnergy halts LNG; Ras Tanura refinery attacked,infrastructure_strike,Gulf,5,verified,https://iea.blob.core.windows.net/assets/a25ddf53-cd6c-4910-ac90-16bfd28399e7/-12MAR2026_OilMarketReport.pdf
+2026-03-04,Ras Tanura refinery attacked again,infrastructure_strike,Gulf,4,verified,https://iea.blob.core.windows.net/assets/a25ddf53-cd6c-4910-ac90-16bfd28399e7/-12MAR2026_OilMarketReport.pdf
+2026-03-08,Bahrain's Sitra refinery hit by drones; two fuel tankers attacked in Iraqi waters; Iraqi terminals suspend,infrastructure_strike,Gulf,4,verified,https://mycrisiscost.com/oil-crisis-timeline/
+2026-03-10,UAE's Ruwais refinery attacked,infrastructure_strike,Gulf,4,verified,https://iea.blob.core.windows.net/assets/a25ddf53-cd6c-4910-ac90-16bfd28399e7/-12MAR2026_OilMarketReport.pdf
+2026-03-11,IEA agrees record 400 million barrel emergency stock release,stock_release,Global,4,verified,https://www.iea.org/news/update-on-iea-collective-action-decision-of-11-march-2026
+2026-03-15,Trump calls on oil-importing countries to secure the Strait of Hormuz,chokepoint,Gulf,2,verified,https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_campaign
+2026-03-18,Israel strikes South Pars and Asaluyeh; Iran retaliates on Ras Laffan and Gulf energy sites,infrastructure_strike,Gulf,5,verified,https://en.wikipedia.org/wiki/2026_South_Pars_field_attack
+2026-03-19,Ras Laffan LNG trains damaged; Brent touches $119,infrastructure_strike,Gulf,5,verified,https://mycrisiscost.com/oil-crisis-timeline/
+2026-04-08,Pakistan-brokered US-Iran ceasefire takes effect,talks_or_ceasefire,Gulf,4,verified,https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis
+2026-04-13,US naval blockade of Iranian ports begins,chokepoint,Gulf,4,verified,https://en.wikipedia.org/wiki/2026_United_States_naval_blockade_of_Iran
+2026-04-21,Ceasefire extended indefinitely,talks_or_ceasefire,Gulf,2,verified,https://militaryspend.org/iran-war-timeline
+2026-04-28,UAE announces exit from OPEC and OPEC+ effective May 1,opec_plus,Gulf,3,verified,https://www.khaleejtimes.com/uae-announces-decision-to-withdraw-from-opec-opec-from-may-1
+2026-05-03,Seven OPEC+ countries raise June targets by 188 kb/d,opec_plus,Global,2,verified,https://www.tradearabia.com/tag/Opec-Plus
+2026-06-03,Iranian drone attack on Kuwait International Airport,military_escalation,Gulf,3,verified,https://militaryspend.org/iran-war-timeline
+2026-06-07,Seven OPEC+ countries raise July targets by 188 kb/d,opec_plus,Global,2,verified,https://qna.org.qa/en/News-Area/News/2026-6/7/opec-decides-to-raise-oil-output-target-by-188000-barrels-per-day-for-july
+2026-06-09,US strikes Iranian air defenses; IRGC attacks US Gulf bases; Iran declares Hormuz fully closed (9-11 June),chokepoint,Gulf,5,verified,https://armedconflicts.org/strait-of-hormuz-crisis.html
+2026-06-14,"US and Iran sign the Islamabad Memorandum (ceasefire, toll-free Hormuz reopening)",talks_or_ceasefire,Gulf,4,verified,https://en.wikipedia.org/wiki/2026_United_States_naval_blockade_of_Iran
+2026-06-18,US lifts naval blockade of Iranian ports,talks_or_ceasefire,Gulf,3,verified,https://armedconflicts.org/iran-us-war.html
+2026-06-19,"About 20 tankers transit Hormuz, most since early June",chokepoint,Gulf,2,verified,https://armedconflicts.org/iran-us-war.html
+2026-06-22,US issues General License X allowing Iranian oil sales through Aug 21 (sanctions relief under the MOU),sanctions,Gulf,3,verified,https://sanctionsnews.bakermckenzie.com/?p=5278
+2026-07-05,Seven OPEC+ countries raise August targets by 188 kb/d,opec_plus,Global,2,verified,https://www.enerdata.net/publications/daily-energy-news/opec-confirms-188-kbd-production-increase-august-2026.html
+2026-07-07,US revokes the Iranian oil sanctions waiver after tanker strikes in Hormuz; sanctions snap back from Jul 17,sanctions,Gulf,4,verified,https://jewishinsider.com/2026/07/us-revokes-iran-oil-sanction-waiver-after-strait-of-hormuz-attacks/
+2026-07-08,Interim ceasefire collapses after alleged Iranian strikes on ships in Hormuz; US strikes Iran,vessel_attack_or_seizure,Gulf,5,verified,https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_campaign
+2026-07-27,Houthis claim attacks on Saudi oil sites linking the east to Yanbu (after announcing a Red Sea blockade),infrastructure_strike,Red Sea,4,verified,https://hirunews.lk/goldfmnews/479971/houthis-say-they-targeted-saudi-east-west-oil-transport
+2026-08-31,"About 17 million barrels of crude pass Hormuz in a day, highest in months",chokepoint,Gulf,2,verified,https://engine.online/news/brent-moves-higher-as-iran-asserts-total-control-of-hormuz-8103
+2026-09-08,Iran asserts complete control of Hormuz; projectile hits a vessel in the strait,chokepoint,Gulf,4,check date,https://engine.online/news/brent-moves-higher-as-iran-asserts-total-control-of-hormuz-8103
+2026-09-10,Drone attack shuts Saudi East-West pipeline (blamed on Iraq-based militias),infrastructure_strike,Gulf,5,check date,https://www.adn.com/nation-world/2026/09/14/saudi-pipeline-hit-by-drones-will-be-out-of-service-for-weeks-further-restricting-oil-flow/
+2026-09-14,Hormuz talks in Oman postponed; Brent up about 3% to $107,talks_or_ceasefire,Gulf,3,verified,https://www.omanobserver.om/article/1196169/business/markets/oman-crude-surges-to-12762-following-suspension-of-hormuz-talks
+2026-09-22,US diesel price hits $6.52 per gallon,other,Americas,2,verified,https://www.gktoday.in/g7-agrees-to-release-100-million-barrels-of-oil/
+2026-09-25,Fresh Houthi missile attacks on Saudi Arabia; France to help protect Yanbu,infrastructure_strike,Red Sea,3,verified,https://www.euronews.com/2026/09/25/saudi-arabia-reports-fresh-houthi-attacks-as-france-offers-military-support-to-protect-yan
+2026-10-01,Report of a third US carrier to the Middle East; at least three tankers attacked in Hormuz that week; Brent +4.4%,military_escalation,Gulf,3,verified,https://www.cnbc.com/2026/10/01/oil-prices-today-wti-brent.html
+2026-10-02,G7 agree a 100 million barrel crude and diesel release,stock_release,Global,3,verified,https://virginiabusiness.com/europe-agrees-release-diesel-oil-stocks/
+2026-10-07,Ukrainian drone attack sets a tanker on fire off Sochi (Black Sea),vessel_attack_or_seizure,Russia/Black Sea,3,verified (GDELT),https://www.abc.net.au/news/2026-10-07/oil-tanker-attack-in-black-sea-off-sochi-sparks-giant-fire/10
+2026-10-08,Iran steps up Hormuz tanker attacks; first deep-Gulf tanker attack in a month (off Qatar); Brent +5% to about $105,vessel_attack_or_seizure,Gulf,4,verified,https://oilprice.com/Latest-Energy-News/World-News/Oil-Jumps-2-as-Iran-Steps-Up-Attacks-on-Hormuz-Tankers.html
+2026-10-08,Hurricane Isaias in the Gulf of Mexico (8-10 Oct); US offshore output shut in,storm,Americas,3,verified,https://oilprice.com/Latest-Energy-News/World-News/Oil-Jumps-2-as-Iran-Steps-Up-Attacks-on-Hormuz-Tankers.html
+2026-10-10,Iran strikes a gas tanker in the Strait of Hormuz,vessel_attack_or_seizure,Gulf,4,verified (GDELT),https://www.dailyliberal.com.au/story/9365979/iran-strikes-gas-tanker-in-strait-of-hormuz/

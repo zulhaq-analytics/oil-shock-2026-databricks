@@ -1,0 +1,32 @@
+version: 2
+
+seeds:
+  - name: ref_event_timeline
+    description: "Curated, source-linked oil market events (Jan 2025 onward). Hand-picked with hindsight; severity is judgment, display only, never a model input."
+    config:
+      column_types:
+        event_date: date
+        severity_1to5: int
+    columns:
+      - name: event_date
+        data_tests:
+          - not_null
+      - name: event
+        data_tests:
+          - not_null
+      - name: category
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['sanctions', 'talks_or_ceasefire', 'infrastructure_strike', 'military_escalation', 'chokepoint', 'opec_plus', 'vessel_attack_or_seizure', 'policy', 'stock_release', 'storm', 'other']
+      - name: severity_1to5
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5]
+                quote: false
+      - name: source_url
+        data_tests:
+          - not_null
