@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fct_model_features_daily
+    description: "One row per Brent trading day (2015+). Point-in-time features: each value appears only from the day it was published (macro +1d, COT +3d, EIA weekly +5d, PortWatch +7d, monthly macro and OECD CLI ~+6 weeks), then carried forward. Risk values also as 3-day max so weekend news reaches Monday."
+    columns:
+      - name: price_date
+        data_tests:
+          - unique
+          - not_null
+      - name: brent
+        data_tests:
+          - not_null
