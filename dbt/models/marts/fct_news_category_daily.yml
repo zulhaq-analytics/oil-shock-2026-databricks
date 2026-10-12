@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fct_news_category_daily
+    description: "Daily GDELT story counts by region and story type, with a surprise score (z of log(1+count) vs prior 90 days). NULL on data-gap days. Used by driver attribution v2."
+    columns:
+      - name: row_key
+        data_tests:
+          - unique
+          - not_null
+      - name: category
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['vessel_attack_or_seizure', 'infrastructure_strike', 'chokepoint', 'sanctions', 'opec_plus', 'talks_or_ceasefire']
