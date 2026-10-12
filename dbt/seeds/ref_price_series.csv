@@ -1,0 +1,15 @@
+series_id,price_name,price_group,market,unit_original,to_usd_per_bbl
+RBRTE,Brent physical,crude,North Sea (Europe),USD/bbl,1
+RWTC,WTI spot,crude,Cushing (US),USD/bbl,1
+EER_EPMRU_PF4_Y35NY_DPG,Gasoline,product,New York Harbor (US),USD/gal,42
+EER_EPD2DXL0_PF4_Y35NY_DPG,Ultra-low sulfur diesel,product,New York Harbor (US),USD/gal,42
+EER_EPJK_PF4_RGC_DPG,Jet fuel,product,US Gulf Coast,USD/gal,42
+EER_EPD2F_PF4_Y35NY_DPG,Heating oil,product,New York Harbor (US),USD/gal,42
+RCLC1,WTI futures contract 1 (to Apr 2024),crude_futures,NYMEX (US),USD/bbl,1
+RCLC2,WTI futures contract 2 (to Apr 2024),crude_futures,NYMEX (US),USD/bbl,1
+RCLC3,WTI futures contract 3 (to Apr 2024),crude_futures,NYMEX (US),USD/bbl,1
+RCLC4,WTI futures contract 4 (to Apr 2024),crude_futures,NYMEX (US),USD/bbl,1
+RNGWHHD,Henry Hub natural gas,gas,Henry Hub (US),USD/MMBtu,
+POILDUBUSDM,Dubai (IMF monthly average),crude,Middle East,USD/bbl,1
+POILBREUSDM,Brent (IMF monthly average),crude,North Sea (Europe),USD/bbl,1
+POILWTIUSDM,WTI (IMF monthly average),crude,US,USD/bbl,1

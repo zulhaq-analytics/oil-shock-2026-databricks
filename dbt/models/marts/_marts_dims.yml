@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: Calendar 2002-2027 with season flags (driving, heating, hurricane) and war period (from 2026-02-28).
+    columns:
+      - name: date_day
+        tests: [unique, not_null]
+  - name: dim_country
+    description: JODI countries with region, OPEC and OPEC+ membership (2026) and Hormuz exporter flag.
+    columns:
+      - name: country_code
+        tests: [unique, not_null]
+      - name: region
+        tests: [not_null]
+  - name: dim_chokepoint
+    description: PortWatch chokepoints with route region and oil relevance.
+    columns:
+      - name: chokepoint_id
+        tests: [unique, not_null]
+      - name: route_region
+        tests:
+          - not_null
+  - name: dim_event_region
+    description: Event regions used to group GDELT events.
+    columns:
+      - name: event_region
+        tests: [unique, not_null]

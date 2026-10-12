@@ -1,0 +1,29 @@
+chokepoint_name,route_region,oil_relevant
+Strait of Hormuz,Middle East,true
+Bab el-Mandeb Strait,Middle East,true
+Suez Canal,Middle East,true
+Cape of Good Hope,Africa,true
+Malacca Strait,Asia,true
+Bosporus Strait,Europe,true
+Panama Canal,Americas,true
+Gibraltar Strait,Europe,true
+Dover Strait,Europe,true
+Oresund Strait,Europe,true
+Kerch Strait,Europe,true
+Taiwan Strait,Asia,true
+Korea Strait,Asia,true
+Luzon Strait,Asia,true
+Lombok Strait,Asia,true
+Sunda Strait,Asia,true
+Makassar Strait,Asia,true
+Bohai Strait,Asia,false
+Tsugaru Strait,Asia,false
+Mindoro Strait,Asia,false
+Balabac Strait,Asia,false
+Ombai Strait,Asia,false
+Torres Strait,Oceania,false
+Yucatan Channel,Americas,true
+Windward Passage,Americas,false
+Mona Passage,Americas,false
+Magellan Strait,Americas,false
+Bering Strait,Arctic,false

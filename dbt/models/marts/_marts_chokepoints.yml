@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: fct_chokepoint_daily
+    description: Daily ship transits per chokepoint with 7-day averages and percent of the 2025 (pre-war) daily average. Sources UN Global Platform; IMF PortWatch.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: chokepoint_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_chokepoint')
+                field: chokepoint_id

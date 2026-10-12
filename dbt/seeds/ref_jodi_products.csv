@@ -1,0 +1,14 @@
+product_code,product_name,product_group
+CRUDEOIL,Crude oil,crude
+NGL,Natural gas liquids,crude
+OTHERCRUDE,Other primary (feedstocks and additives),crude
+TOTCRUDE,Total primary (crude + NGL + other),crude_total
+LPG,LPG,product
+NAPHTHA,Naphtha,product
+GASOLINE,Gasoline,product
+KEROSENE,Kerosene,product
+JETKERO,Jet fuel (kerosene type),product
+GASDIES,Diesel and gasoil,product
+RESFUEL,Fuel oil,product
+ONONSPEC,Other products,product
+TOTPRODS,Total products,product_total

@@ -1,0 +1,16 @@
+flow_code,flow_name,measure
+INDPROD,Production,flow
+OSOURCES,Production from other sources,flow
+TOTIMPSB,Imports,flow
+TOTEXPSB,Exports,flow
+TRANSBAK,Products transferred back,flow
+DIRECUSE,Direct use,flow
+STATDIFF,Statistical difference,flow
+REFINOBS,Refinery intake,flow
+REFGROUT,Refinery output,flow
+RECEIPTS,Receipts,flow
+PTRANSF,Products transferred,flow
+IPTRANSF,Interproduct transfers,flow
+TOTDEMO,Demand,flow
+STOCKCH,Stock change,stock
+CLOSTLV,Closing stocks,stock

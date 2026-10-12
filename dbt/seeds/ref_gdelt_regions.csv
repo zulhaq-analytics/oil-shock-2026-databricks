@@ -1,0 +1,27 @@
+fips_code,country_name,event_region
+IR,Iran,Gulf
+IZ,Iraq,Gulf
+SA,Saudi Arabia,Gulf
+KU,Kuwait,Gulf
+AE,United Arab Emirates,Gulf
+QA,Qatar,Gulf
+MU,Oman,Gulf
+BA,Bahrain,Gulf
+YM,Yemen,Red Sea
+DJ,Djibouti,Red Sea
+ER,Eritrea,Red Sea
+EG,Egypt,Red Sea
+SU,Sudan,Red Sea
+SO,Somalia,Red Sea
+RS,Russia,Russia/Black Sea
+UP,Ukraine,Russia/Black Sea
+TU,Turkiye,Russia/Black Sea
+KZ,Kazakhstan,Russia/Black Sea
+AJ,Azerbaijan,Russia/Black Sea
+LY,Libya,Africa
+NI,Nigeria,Africa
+AG,Algeria,Africa
+AO,Angola,Africa
+VE,Venezuela,Americas
+US,United States,Americas
+IS,Israel,Levant

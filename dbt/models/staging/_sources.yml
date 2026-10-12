@@ -26,5 +26,7 @@ sources:
         description: NOAA HURDAT2 Atlantic storm tracks, 6-hourly, 1990 onward.
       - name: noaa_active_storms
         description: Snapshots of NOAA active storms, one row per storm per run.
+      - name: noaa_bdeck
+        description: NOAA NHC current-season Atlantic best tracks (b-decks), refreshed each run.
       - name: gdelt_events
         description: Oil-relevant GDELT events, filtered at ingestion. Source The GDELT Project.

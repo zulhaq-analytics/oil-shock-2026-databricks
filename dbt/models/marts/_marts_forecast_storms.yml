@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fct_steo_forecast
+    description: EIA Short-Term Energy Outlook values by release month (vintage); is_forecast marks months not yet past at release.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: release_month
+        tests: [not_null]
+  - name: fct_storm_track
+    description: Atlantic storm positions (HURDAT2 history plus live snapshots) with a Gulf of Mexico flag (lat 18-31N, lon 98-80W).
+  - name: fct_gulf_storm_daily
+    description: Daily count of storms in the Gulf of Mexico and the strongest wind; weather driver for US offshore production.
+    columns:
+      - name: storm_date
+        tests: [unique, not_null]

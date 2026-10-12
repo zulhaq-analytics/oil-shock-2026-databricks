@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_price_series
+    description: Price series with name, group, market and units (products converted to USD/bbl).
+    columns:
+      - name: series_id
+        tests: [unique, not_null]
+  - name: fct_price_daily
+    description: Daily prices from EIA. Brent is physical spot (not futures); WTI futures end April 2024. Products converted from USD/gal to USD/bbl.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: price
+        tests: [not_null]
+  - name: fct_spread_daily
+    description: Brent minus WTI, and product cracks (product minus Brent physical), USD/bbl.
+    columns:
+      - name: price_date
+        tests: [unique, not_null]
+  - name: fct_price_monthly
+    description: IMF monthly average prices for Dubai, Brent and WTI (attribution required).
+    columns:
+      - name: row_key
+        tests: [unique, not_null]

@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: fct_positioning_weekly
+    description: Weekly trader positions with money-manager net, weekly change, share of open interest and a 52-week crowding z-score (CFTC NYMEX; ICE Brent, gasoil, Dubai).
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+  - name: fct_macro_daily
+    description: Daily dollar index, Fed funds rate, 10-year yield and VIX (VIX for models only; report shows fear_level, credited to Cboe via FRED).
+    columns:
+      - name: obs_date
+        tests: [unique, not_null]
+      - name: fear_level
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['low', 'normal', 'high']
+  - name: fct_macro_monthly
+    description: US CPI and industrial production with year-on-year changes.
+    columns:
+      - name: month_start
+        tests: [unique, not_null]
+  - name: fct_leading_indicator_monthly
+    description: OECD composite leading indicators by economy with 3-month change and direction.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]

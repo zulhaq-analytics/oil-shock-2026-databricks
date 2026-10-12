@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: fct_oil_balance_monthly
+    description: JODI monthly oil balances by country, product and flow. Flows in thousand barrels per day (KBD), stocks in thousand barrels (KBBL). Reported values only.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: country_code
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_country')
+                field: country_code
+  - name: fct_country_balance_monthly
+    description: One row per country and month with the main oil balance items (KBD flows, KBBL stocks).
+    columns:
+      - name: row_key
+        tests: [unique, not_null]

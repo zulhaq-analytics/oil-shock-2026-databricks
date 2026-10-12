@@ -1,4 +1,5 @@
-"""NOAA National Hurricane Center: active storm snapshots and HURDAT2 Atlantic history."""
+"""NOAA National Hurricane Center: active storm snapshots, current-season best tracks (b-decks)
+and HURDAT2 Atlantic history."""
 import re
 import json
 import datetime as dt
@@ -8,8 +9,10 @@ from src import oil_http as oh
 
 CURRENT_URL = "https://www.nhc.noaa.gov/CurrentStorms.json"
 HURDAT_DIR = "https://www.nhc.noaa.gov/data/hurdat/"
+BDECK_DIR = "https://ftp.nhc.noaa.gov/atcf/btk/"
 ACTIVE_TABLE = f"{oh.CATALOG}.bronze.noaa_active_storms"
 TRACK_TABLE = f"{oh.CATALOG}.bronze.noaa_hurdat2"
+BDECK_TABLE = f"{oh.CATALOG}.bronze.noaa_bdeck"
 FIRST_YEAR = 1990
 
 ACTIVE_SCHEMA = T.StructType([
@@ -46,11 +49,13 @@ def ensure_tables():
         intensity_kt DOUBLE, pressure_mb DOUBLE, latitude DOUBLE, longitude DOUBLE,
         last_update STRING, storm_json STRING)
         COMMENT 'Snapshots of NOAA NHC active storms (one row per storm per run)'""")
-    s.sql(f"""CREATE TABLE IF NOT EXISTS {TRACK_TABLE} (
-        storm_id STRING, name STRING, obs_time STRING, record_id STRING, status STRING,
-        latitude DOUBLE, longitude DOUBLE, max_wind_kt DOUBLE, min_pressure_mb DOUBLE,
-        source_file STRING, loaded_at TIMESTAMP)
-        COMMENT 'NOAA HURDAT2 Atlantic best-track history (6-hourly), 1990 onward'""")
+    for table, note in [(TRACK_TABLE, "NOAA HURDAT2 Atlantic best-track history (6-hourly), 1990 onward"),
+                        (BDECK_TABLE, "NOAA NHC current-season Atlantic best tracks (b-decks), refreshed each run")]:
+        s.sql(f"""CREATE TABLE IF NOT EXISTS {table} (
+            storm_id STRING, name STRING, obs_time STRING, record_id STRING, status STRING,
+            latitude DOUBLE, longitude DOUBLE, max_wind_kt DOUBLE, min_pressure_mb DOUBLE,
+            source_file STRING, loaded_at TIMESTAMP)
+            COMMENT '{note}'""")
 
 
 def _num(v):
@@ -68,6 +73,18 @@ def _coord(text):
     value = _num(text[:-1])
     if value is None:
         return None
+    return -value if text[-1] in "SW" else value
+
+
+def _bdeck_coord(text):
+    """b-deck coordinates are in tenths of a degree, e.g. 220N -> 22.0, 965W -> -96.5."""
+    text = (text or "").strip()
+    if len(text) < 2:
+        return None
+    value = _num(text[:-1])
+    if value is None:
+        return None
+    value = value / 10.0
     return -value if text[-1] in "SW" else value
 
 
@@ -93,6 +110,54 @@ def run_active():
     oh.spark().createDataFrame(records, ACTIVE_SCHEMA).write.mode("append").saveAsTable(ACTIVE_TABLE)
     oh.set_watermark("noaa", "active_storms", now.isoformat(timespec="seconds"), len(records))
     return {"active_storms": len(records), "names": [r["name"] for r in records]}
+
+
+def run_bdecks(year=None):
+    """Reload all Atlantic best-track files for the current season (replaces that season's rows)."""
+    ensure_tables()
+    year = year or dt.date.today().year
+    dl = oh.Downloader("noaa", timeout=60)
+    records = []
+    loaded_at = dt.datetime.utcnow()
+    try:
+        listing = dl.get("bdeck_dir", BDECK_DIR).text
+        files = sorted(set(re.findall(rf"bal\d{{2}}{year}\.dat", listing)))
+        for name in files:
+            text = dl.get("bdeck_file", BDECK_DIR + name).text
+            rows, seen, storm_name = [], set(), None
+            for line in text.splitlines():
+                p = [x.strip() for x in line.split(",")]
+                if len(p) < 11 or p[4] != "BEST":
+                    continue
+                key = p[2]
+                if len(p) > 27 and p[27]:
+                    storm_name = p[27]
+                if key in seen:
+                    continue
+                seen.add(key)
+                t = p[2]
+                rows.append({
+                    "storm_id": f"AL{p[1]}{year}", "name": None,
+                    "obs_time": f"{t[:4]}-{t[4:6]}-{t[6:8]}T{t[8:10]}:00:00Z",
+                    "record_id": None, "status": p[10],
+                    "latitude": _bdeck_coord(p[6]), "longitude": _bdeck_coord(p[7]),
+                    "max_wind_kt": _num(p[8]), "min_pressure_mb": _num(p[9]) or None,
+                    "source_file": name, "loaded_at": loaded_at,
+                })
+            for r in rows:
+                r["name"] = storm_name
+            records.extend(rows)
+            dl.note_rows(len(rows))
+    finally:
+        dl.flush()
+
+    s = oh.spark()
+    s.sql(f"DELETE FROM {BDECK_TABLE} WHERE storm_id LIKE :p", args={"p": f"AL__{year}"})
+    if records:
+        s.createDataFrame(records, TRACK_SCHEMA).write.mode("append").saveAsTable(BDECK_TABLE)
+        oh.set_watermark("noaa", "bdeck", max(r["obs_time"] for r in records)[:10], len(records))
+    return {"season": year, "files": len(files), "rows": len(records),
+            "storms": sorted({(r["storm_id"], r["name"]) for r in records})}
 
 
 def run_hurdat():

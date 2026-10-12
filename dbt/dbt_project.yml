@@ -20,3 +20,15 @@ models:
     marts:
       +schema: gold
       +materialized: table
+
+seeds:
+  oil_shock:
+    +schema: silver
+    ref_countries:
+      +column_types:
+        opec_member: boolean
+        opec_plus_partner: boolean
+        hormuz_exporter: boolean
+    ref_chokepoints:
+      +column_types:
+        oil_relevant: boolean

@@ -1,0 +1,119 @@
+iso2,country_name,region,opec_member,opec_plus_partner,hormuz_exporter
+AE,United Arab Emirates,Middle East,true,false,true
+AL,Albania,Europe,false,false,false
+AM,Armenia,Eurasia,false,false,false
+AO,Angola,Africa,false,false,false
+AR,Argentina,Central & South America,false,false,false
+AT,Austria,Europe,false,false,false
+AU,Australia,Asia & Oceania,false,false,false
+AZ,Azerbaijan,Eurasia,false,true,false
+BB,Barbados,Central & South America,false,false,false
+BD,Bangladesh,Asia & Oceania,false,false,false
+BE,Belgium,Europe,false,false,false
+BG,Bulgaria,Europe,false,false,false
+BH,Bahrain,Middle East,false,true,true
+BM,Bermuda,North America,false,false,false
+BN,Brunei,Asia & Oceania,false,true,false
+BO,Bolivia,Central & South America,false,false,false
+BR,Brazil,Central & South America,false,false,false
+BY,Belarus,Eurasia,false,false,false
+BZ,Belize,Central & South America,false,false,false
+CA,Canada,North America,false,false,false
+CH,Switzerland,Europe,false,false,false
+CL,Chile,Central & South America,false,false,false
+CN,China,Asia & Oceania,false,false,false
+CO,Colombia,Central & South America,false,false,false
+CR,Costa Rica,Central & South America,false,false,false
+CU,Cuba,Central & South America,false,false,false
+CY,Cyprus,Europe,false,false,false
+CZ,Czechia,Europe,false,false,false
+DE,Germany,Europe,false,false,false
+DK,Denmark,Europe,false,false,false
+DO,Dominican Republic,Central & South America,false,false,false
+DZ,Algeria,Africa,true,false,false
+EC,Ecuador,Central & South America,false,false,false
+EE,Estonia,Europe,false,false,false
+EG,Egypt,Africa,false,false,false
+ES,Spain,Europe,false,false,false
+FI,Finland,Europe,false,false,false
+FR,France,Europe,false,false,false
+GA,Gabon,Africa,true,false,false
+GB,United Kingdom,Europe,false,false,false
+GD,Grenada,Central & South America,false,false,false
+GE,Georgia,Eurasia,false,false,false
+GM,Gambia,Africa,false,false,false
+GQ,Equatorial Guinea,Africa,true,false,false
+GR,Greece,Europe,false,false,false
+GT,Guatemala,Central & South America,false,false,false
+GY,Guyana,Central & South America,false,false,false
+HK,Hong Kong,Asia & Oceania,false,false,false
+HN,Honduras,Central & South America,false,false,false
+HR,Croatia,Europe,false,false,false
+HT,Haiti,Central & South America,false,false,false
+HU,Hungary,Europe,false,false,false
+ID,Indonesia,Asia & Oceania,false,false,false
+IE,Ireland,Europe,false,false,false
+IN,India,Asia & Oceania,false,false,false
+IQ,Iraq,Middle East,true,false,true
+IR,Iran,Middle East,true,false,true
+IS,Iceland,Europe,false,false,false
+IT,Italy,Europe,false,false,false
+JM,Jamaica,Central & South America,false,false,false
+JP,Japan,Asia & Oceania,false,false,false
+KR,South Korea,Asia & Oceania,false,false,false
+KW,Kuwait,Middle East,true,false,true
+KZ,Kazakhstan,Eurasia,false,true,false
+LT,Lithuania,Europe,false,false,false
+LU,Luxembourg,Europe,false,false,false
+LV,Latvia,Europe,false,false,false
+LY,Libya,Africa,true,false,false
+MA,Morocco,Africa,false,false,false
+MD,Moldova,Eurasia,false,false,false
+MK,North Macedonia,Europe,false,false,false
+MM,Myanmar,Asia & Oceania,false,false,false
+MT,Malta,Europe,false,false,false
+MU,Mauritius,Africa,false,false,false
+MX,Mexico,North America,false,true,false
+MY,Malaysia,Asia & Oceania,false,true,false
+NE,Niger,Africa,false,false,false
+NG,Nigeria,Africa,true,false,false
+NI,Nicaragua,Central & South America,false,false,false
+NL,Netherlands,Europe,false,false,false
+NO,Norway,Europe,false,false,false
+NP,Nepal,Asia & Oceania,false,false,false
+NZ,New Zealand,Asia & Oceania,false,false,false
+OM,Oman,Middle East,false,true,false
+PA,Panama,Central & South America,false,false,false
+PE,Peru,Central & South America,false,false,false
+PG,Papua New Guinea,Asia & Oceania,false,false,false
+PH,Philippines,Asia & Oceania,false,false,false
+PL,Poland,Europe,false,false,false
+PT,Portugal,Europe,false,false,false
+PY,Paraguay,Central & South America,false,false,false
+QA,Qatar,Middle East,false,false,true
+RO,Romania,Europe,false,false,false
+RS,Serbia,Europe,false,false,false
+RU,Russia,Eurasia,false,true,false
+SA,Saudi Arabia,Middle East,true,false,true
+SD,Sudan,Africa,false,true,false
+SE,Sweden,Europe,false,false,false
+SG,Singapore,Asia & Oceania,false,false,false
+SI,Slovenia,Europe,false,false,false
+SK,Slovakia,Europe,false,false,false
+SR,Suriname,Central & South America,false,false,false
+SV,El Salvador,Central & South America,false,false,false
+SY,Syria,Middle East,false,false,false
+SZ,Eswatini,Africa,false,false,false
+TH,Thailand,Asia & Oceania,false,false,false
+TJ,Tajikistan,Eurasia,false,false,false
+TN,Tunisia,Africa,false,false,false
+TR,Turkiye,Europe,false,false,false
+TT,Trinidad and Tobago,Central & South America,false,false,false
+TW,Taiwan,Asia & Oceania,false,false,false
+UA,Ukraine,Eurasia,false,false,false
+US,United States,North America,false,false,false
+UY,Uruguay,Central & South America,false,false,false
+VE,Venezuela,Central & South America,true,false,false
+VN,Vietnam,Asia & Oceania,false,false,false
+YE,Yemen,Middle East,false,false,false
+ZA,South Africa,Africa,false,false,false

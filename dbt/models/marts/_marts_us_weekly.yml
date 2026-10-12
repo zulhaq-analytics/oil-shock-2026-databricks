@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: fct_us_weekly_balance
+    description: US weekly oil balance from EIA (stocks in thousand barrels, flows in thousand barrels per day), with weekly stock changes. US-only data, used as the best free high-frequency signal.
+    columns:
+      - name: week_ending
+        tests: [unique, not_null]
