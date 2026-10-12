@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: oil_shock
+    schema: bronze
+    description: Raw data as downloaded by the Python loaders (phase 1).
+    tables:
+      - name: eia_series
+        description: EIA API v2 series values (prices, US balances, rigs, STEO forecasts by release month).
+      - name: jodi_oil
+        description: JODI-Oil World Database monthly balances by country, product and flow.
+      - name: portwatch_chokepoints
+        description: IMF PortWatch daily chokepoint transits. Sources UN Global Platform; IMF PortWatch.
+      - name: cftc_cot
+        description: CFTC disaggregated futures-only Commitments of Traders (NYMEX WTI, RBOB, ULSD).
+      - name: ice_cot
+        description: ICE Futures Europe Commitments of Traders (Brent, gasoil, Dubai 1st Line).
+      - name: fred_observations
+        description: FRED series observations (dollar, rates, CPI, industry, VIX, IMF oil prices).
+      - name: fred_series_meta
+        description: FRED series descriptions incl. copyright notes.
+      - name: oecd_cli
+        description: OECD composite leading indicators by area, monthly.
+      - name: noaa_hurdat2
+        description: NOAA HURDAT2 Atlantic storm tracks, 6-hourly, 1990 onward.
+      - name: noaa_active_storms
+        description: Snapshots of NOAA active storms, one row per storm per run.
+      - name: gdelt_events
+        description: Oil-relevant GDELT events, filtered at ingestion. Source The GDELT Project.

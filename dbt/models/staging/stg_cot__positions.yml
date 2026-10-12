@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_cot__positions
+    description: Weekly trader positions for oil futures (CFTC NYMEX WTI/RBOB/ULSD; ICE Brent, gasoil, Dubai), one row per contract, report type and week, with net positions.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: contract_key
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['wti_nymex', 'rbob_nymex', 'ulsd_nymex', 'brent_ice', 'gasoil_ice', 'dubai_ice']
+      - name: report_date
+        tests: [not_null]
+      - name: open_interest
+        tests: [not_null]

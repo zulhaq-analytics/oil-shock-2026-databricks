@@ -1,0 +1,22 @@
+name: oil_shock
+version: "1.0.0"
+config-version: 2
+profile: oil_shock
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+models:
+  oil_shock:
+    staging:
+      +schema: silver
+      +materialized: view
+    intermediate:
+      +schema: silver
+      +materialized: view
+    marts:
+      +schema: gold
+      +materialized: table

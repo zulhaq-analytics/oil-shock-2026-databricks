@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: stg_jodi__oil
+    description: JODI monthly balances by country, product, flow and unit.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: period_date
+        tests: [not_null]
+  - name: stg_portwatch__chokepoints
+    description: Daily ship transits per chokepoint, by vessel type, with tanker capacity.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: ships_total
+        tests: [not_null]
+  - name: stg_fred__observations
+    description: FRED observations with series title, units and copyright flag.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+  - name: stg_oecd__cli
+    description: OECD composite leading indicators (amplitude adjusted), monthly by area.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+  - name: stg_noaa__storm_tracks
+    description: Atlantic storm positions and strength every 6 hours (HURDAT2), 1990 onward.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+  - name: stg_noaa__active_storms
+    description: Active storm snapshots, one row per storm per ingest run.
+  - name: stg_gdelt__events
+    description: Oil-relevant GDELT events with event date, news (publication) date and lag between them.
+    columns:
+      - name: event_id
+        tests: [unique, not_null]
+      - name: news_date
+        tests: [not_null]
+      - name: matched_by
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['oil_word', 'conflict_place', 'diplomacy_place']

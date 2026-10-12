@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_eia__series
+    description: EIA series values with proper dates; actual data vs STEO forecasts (by release month).
+    columns:
+      - name: row_key
+        description: series_id | period | vintage
+        tests: [unique, not_null]
+      - name: series_id
+        tests: [not_null]
+      - name: period_date
+        tests: [not_null]
+      - name: value
+        tests: [not_null]
+      - name: frequency
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['daily', 'weekly', 'monthly']
+      - name: data_kind
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['actual', 'forecast']
