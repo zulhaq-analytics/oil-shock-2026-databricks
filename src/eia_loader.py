@@ -41,6 +41,14 @@ SERIES = [
     S("steo", "monthly", "PATC_WORLD", "STEO: world liquids consumption", facet="seriesId"),
     S("steo", "monthly", "PAPR_OPEC", "STEO: OPEC liquids production", facet="seriesId"),
     S("steo", "monthly", "T3_STCHANGE_WORLD", "STEO: world inventory change", facet="seriesId"),
+    S("steo", "monthly", "COPR_SA", "STEO: Saudi Arabia crude production", facet="seriesId"),
+    S("steo", "monthly", "COPR_IZ", "STEO: Iraq crude production", facet="seriesId"),
+    S("steo", "monthly", "COPR_IR", "STEO: Iran crude production", facet="seriesId"),
+    S("steo", "monthly", "COPR_KU", "STEO: Kuwait crude production", facet="seriesId"),
+    S("steo", "monthly", "COPR_TC", "STEO: UAE crude production", facet="seriesId"),
+    S("steo", "monthly", "COPR_AE", "STEO: UAE crude production (alt code)", facet="seriesId"),
+    S("steo", "monthly", "COPR_OPEC", "STEO: OPEC crude production", facet="seriesId"),
+    S("steo", "monthly", "COPS_OPEC", "STEO: OPEC surplus crude capacity", facet="seriesId"),
 ]
 
 SCHEMA = T.StructType([
