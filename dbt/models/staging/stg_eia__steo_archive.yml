@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_eia__steo_archive
+    description: "Archived EIA STEO releases (Brent, WTI), target month as date."
+    columns:
+      - name: release_month
+        data_tests:
+          - not_null
+      - name: target_month
+        data_tests:
+          - not_null

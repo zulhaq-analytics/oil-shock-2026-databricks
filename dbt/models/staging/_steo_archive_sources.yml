@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bronze_archive
+    database: oil_shock
+    schema: bronze
+    tables:
+      - name: steo_archive
+        description: "EIA STEO monthly releases 2015-01 to 2026-09 (Brent BREPUUS, WTI WTIPUUS), parsed from the archived Excel files. One-time backfill by notebooks/01_ingestion/19_steo_archive."
