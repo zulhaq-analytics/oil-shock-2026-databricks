@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: fct_brent_history_monthly
+    description: Brent physical spot (EIA) monthly average since 1987, nominal and in today's dollars (US CPI, FRED CPIAUCSL), with major events marked. Months after the latest CPI use the latest CPI.
+    columns:
+      - name: month_start
+        tests: [unique, not_null]
+      - name: brent_real
+        tests: [not_null]

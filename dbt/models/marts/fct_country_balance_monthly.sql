@@ -18,6 +18,7 @@ select
     max(case when product_code = 'GASDIES'  and flow_code = 'TOTDEMO'  then value end) as diesel_demand_kbd,
     max(case when product_code = 'JETKERO'  and flow_code = 'TOTDEMO'  then value end) as jet_demand_kbd,
     max(case when product_code = 'GASOLINE' and flow_code = 'TOTDEMO'  then value end) as gasoline_demand_kbd,
+    max(case when product_code = 'RESFUEL'  and flow_code = 'TOTDEMO'  then value end) as fuel_oil_demand_kbd,
     max(case when product_code = 'CRUDEOIL' and flow_code = 'CLOSTLV'  then value end) as crude_stocks_kbbl,
     max(case when product_code = 'TOTPRODS' and flow_code = 'CLOSTLV'  then value end) as product_stocks_kbbl
 from b

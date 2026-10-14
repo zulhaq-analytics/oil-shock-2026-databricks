@@ -16,6 +16,8 @@ def S(route, freq, code, label, facet="series"):
 SERIES = [
     S("petroleum/pri/spt", "daily", "RBRTE", "Brent physical spot"),
     S("petroleum/pri/spt", "daily", "RWTC", "WTI spot (Cushing)"),
+    S("petroleum/pri/gnd", "weekly", "EMM_EPMR_PTE_NUS_DPG", "US regular gasoline, retail (pump)"),
+    S("petroleum/pri/gnd", "weekly", "EMD_EPD2D_PTE_NUS_DPG", "US diesel, retail (pump)"),
     S("petroleum/pri/spt", "daily", "EER_EPMRU_PF4_Y35NY_DPG", "Gasoline spot, New York Harbor"),
     S("petroleum/pri/spt", "daily", "EER_EPD2DXL0_PF4_Y35NY_DPG", "Ultra-low sulfur diesel spot, New York Harbor"),
     S("petroleum/pri/spt", "daily", "EER_EPJK_PF4_RGC_DPG", "Jet fuel spot, US Gulf Coast"),

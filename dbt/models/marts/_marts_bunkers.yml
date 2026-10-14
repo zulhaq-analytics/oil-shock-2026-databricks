@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: fct_sg_bunker_monthly
+    description: Singapore bunker hub by month from 2019. Bunker sales in thousand tonnes (total and by fuel group), vessel arrivals over 75 GT (total, container, bulk carrier, tanker), fuel sold per arriving ship, and each compared with the 2025 monthly average. Source MPA via data.gov.sg.
+    columns:
+      - name: month_start
+        tests: [unique, not_null]
+      - name: bunker_sales_kt
+        tests: [not_null]
+      - name: vessel_arrivals
+        tests: [not_null]

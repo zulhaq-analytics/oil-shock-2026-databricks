@@ -13,3 +13,5 @@ RNGWHHD,Henry Hub natural gas,gas,Henry Hub (US),USD/MMBtu,
 POILDUBUSDM,Dubai (IMF monthly average),crude,Middle East,USD/bbl,1
 POILBREUSDM,Brent (IMF monthly average),crude,North Sea (Europe),USD/bbl,1
 POILWTIUSDM,WTI (IMF monthly average),crude,US,USD/bbl,1
+EMM_EPMR_PTE_NUS_DPG,US regular gasoline (pump),retail,United States,USD/gal,
+EMD_EPD2D_PTE_NUS_DPG,US diesel (pump),retail,United States,USD/gal,

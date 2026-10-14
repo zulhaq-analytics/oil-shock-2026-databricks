@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_portwatch__ports
+    description: Daily port calls and trade estimates (metric tons) for Gulf ports, from ship tracking. Sources UN Global Platform; IMF PortWatch.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: port_date
+        tests: [not_null]

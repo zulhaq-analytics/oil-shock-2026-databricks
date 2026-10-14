@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_sg_mpa__monthly
+    description: Singapore MPA monthly bunker sales (thousand tonnes, total and by fuel type) and vessel arrivals over 75 GT (count and thousand GT, total and by vessel type).
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: dataset
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['bunker_total', 'bunker_by_type', 'arrivals_total', 'arrivals_by_type']
+      - name: month_start
+        tests: [not_null]
+      - name: value
+        tests: [not_null]

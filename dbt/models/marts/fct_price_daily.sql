@@ -13,5 +13,5 @@ select
 from {{ ref('stg_eia__series') }} e
 join {{ ref('ref_price_series') }} p
     on e.series_id = p.series_id
-where e.frequency = 'daily'
+where (e.frequency = 'daily' or e.series_id in ('EMM_EPMR_PTE_NUS_DPG', 'EMD_EPD2D_PTE_NUS_DPG'))
   and e.data_kind = 'actual'

@@ -6,12 +6,16 @@ sources:
     schema: bronze
     description: Raw data as downloaded by the Python loaders (phase 1).
     tables:
+      - name: sg_mpa_monthly
+        description: Singapore MPA monthly bunker sales (thousand tonnes) and vessel arrivals over 75 GT, from data.gov.sg.
       - name: eia_series
         description: EIA API v2 series values (prices, US balances, rigs, STEO forecasts by release month).
       - name: jodi_oil
         description: JODI-Oil World Database monthly balances by country, product and flow.
       - name: portwatch_chokepoints
         description: IMF PortWatch daily chokepoint transits. Sources UN Global Platform; IMF PortWatch.
+      - name: portwatch_ports
+        description: IMF PortWatch daily port calls and trade estimates for Gulf ports. Sources UN Global Platform; IMF PortWatch.
       - name: cftc_cot
         description: CFTC disaggregated futures-only Commitments of Traders (NYMEX WTI, RBOB, ULSD).
       - name: ice_cot

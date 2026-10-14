@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fct_port_daily
+    description: Daily tanker exports per Gulf port (metric tons, 7-day average, percent of the 2025 average, rough barrels per day) with a role flag (inside Hormuz, bypass, gas, tracking gap). Ship-tracking estimates, not customs data. Sources UN Global Platform; IMF PortWatch.
+    columns:
+      - name: row_key
+        tests: [unique, not_null]
+      - name: port_role
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['inside_hormuz', 'bypass', 'outside_hormuz', 'gas', 'tracking_gap', 'other']

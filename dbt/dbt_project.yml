@@ -32,3 +32,9 @@ seeds:
     ref_chokepoints:
       +column_types:
         oil_relevant: boolean
+    ref_gulf_ports:
+      +column_types:
+        port_name: string
+        iso3: string
+        role: string
+        chart_label: string
