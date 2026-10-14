@@ -11,7 +11,10 @@ with w as (
         max(case when series_id = 'WCRIMUS2' then value end) as crude_imports_kbd,
         max(case when series_id = 'WCREXUS2' then value end) as crude_exports_kbd
     from {{ ref('stg_eia__series') }}
-    where frequency = 'weekly' and data_kind = 'actual'
+    where frequency = 'weekly'
+      and data_kind = 'actual'
+      and series_id in ('WCESTUS1', 'WCSSTUS1', 'WGTSTUS1', 'WDISTUS1', 'WCRFPUS2',
+                        'WPULEUS3', 'WRPUPUS2', 'WCRIMUS2', 'WCREXUS2')
     group by period_date
 )
 

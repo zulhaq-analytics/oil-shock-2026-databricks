@@ -1,8 +1,8 @@
 event_month,event_label
-1990-08-01,1990 Kuwait
-2003-03-01,2003 Iraq
-2008-07-01,2008 peak
-2014-11-01,2014 OPEC
-2020-04-01,2020 COVID
-2022-02-01,2022 Ukraine
-2026-02-01,2026 war
+1990-08-01,1990: Iraq invades Kuwait
+2003-03-01,2003: US invades Iraq
+2008-07-01,"2008: record high, then crash"
+2014-11-01,2014: OPEC keeps output up
+2020-04-01,2020: COVID lockdowns
+2022-02-01,2022: Russia invades Ukraine
+2026-02-01,2026: war begins
